@@ -56,9 +56,16 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo \
+          cd exampleSite; 
+          hugo || hugo --themesDir ../.. \
             --gc \
             --minify \
+            --templateMetrics \
+            --templateMetricsHints \
+            --buildDrafts \
+            --buildExpired \
+            --buildFuture \
+            --forceSyncStatic \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
