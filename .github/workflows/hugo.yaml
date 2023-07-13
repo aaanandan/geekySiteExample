@@ -57,7 +57,7 @@ jobs:
           HUGO_ENV: production
         run: |
           pwd
-          cd themes\exampleSite; 
+          cd themes/exampleSite; 
           hugo || hugo --themesDir ../.. \
             --gc \
             --minify \
