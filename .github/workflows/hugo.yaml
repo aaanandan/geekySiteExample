@@ -55,9 +55,6 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-          HUGO_VERSION: "0.109.0"
-          HUGO_THEME: "repo"
-          HUGO_BASEURL: "/"
         run: |
           pwd
           cd themes/exampleSite; 
